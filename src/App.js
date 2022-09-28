@@ -5,22 +5,22 @@ import Box from "./Box"
 
 const App = () => {
 
-  const [squares, setSquares] = useState(boxes)
-  
+  const [ squares, setSquares ] = useState(boxes)
+
   const toggle = (id) => {
     setSquares(prevSquares => {
       return prevSquares.map((square) => {
-        return square.id === id ? { ...square, on: !square.on} : square
+        return square.id === id ? { ...square, on: !square.on } : square
       })
-    }) 
+    })
   }
-  
+   
     const squareElements = squares.map((square) => (
       <Box 
         key={square.id} 
-        id={square.id}
+
         on={square.on}
-        toggle={toggle}                
+        toggle={() => toggle(square.id)}                
         />
     ))
 

@@ -11,7 +11,7 @@ const Box = (props) => {
         <div
          className="box"
          style={styles}
-         onClick={()=>props.toggle(props.id)}>
+         onClick={props.toggle}>
         </div>
     )
 }
